@@ -1,0 +1,16 @@
+anchor=top-right
+font=mononoki Nerd Font 10
+background-color=#24283bf0
+text-color=#c0caf5
+width=350
+margin=10,10,10
+padding=10
+border-size=2
+border-color=#414868
+border-radius=5
+default-timeout=10000
+group-by=summary
+max-visible=3
+
+[grouped]
+format=<b>%s</b>\n%b

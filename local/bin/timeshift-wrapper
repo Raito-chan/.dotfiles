@@ -1,0 +1,4 @@
+#!/bin/bash
+# Run Timeshift with environment variables passed through pkexec
+pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY WAYLAND_DISPLAY=$WAYLAND_DISPLAY XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR timeshift-gtk
+
