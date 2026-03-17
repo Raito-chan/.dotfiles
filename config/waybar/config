@@ -4,7 +4,7 @@
   "modules-center": ["hyprland/window"],
   "modules-right": ["network", "pulseaudio", "battery", "clock"],
   "clock": {
-    "format": "<span foreground='#f5c2e7'>   </span>{:%d %a %I:%M %p}",
+    "format": "<span size='13000' foreground='#f5c2e7'> </span>{:%d %a %I:%M %p}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "battery": {
@@ -23,14 +23,24 @@
     "tooltip-format": "{time}"
   },
   "network": {
-    "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid}",
-    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
-    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
+    "format-wifi": "<span size='13000' foreground='#f5e0dc'>{icon}</span>{essid}",
+    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰈀 </span> Wired",
+    "format-linked": "<span size='13000' foreground='#f5e0dc'>󰈂 </>{ifname} (No IP)",
+    "format-disconnected": "<span size='13000' foreground='#f5e0dc'>󰤭 </span>Disconnected",
+    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
+    "format-icons": {
+      "wifi": [
+        "󰤫 ",
+	"󰤯 ",
+	"󰤟 ",
+	"󰤢 ",
+	"󰤥 ",
+	"󰤨 "
+      ]
+    }
   },
   "pulseaudio": {
-      "format": "{icon}  {volume}%",
+      "format": "<span size='13000'>{icon}</span>  {volume}%",
       "format-muted": "",
       "format-icons": {
           "default": ["", "", " "]

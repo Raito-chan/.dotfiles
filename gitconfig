@@ -1,3 +1,8 @@
 [user]
 	name = Raito
 	email = 222690486+Raito-chan@users.noreply.github.com
+
+[url "git@raito-gh:Raito-Chan/"]
+	insteadOf = git@github.com:Raito-chan/
+[url "git@sh-gh:SahibzadaHafeez/"]
+	insteadOf = git@github.com:SahibzadaHafeez/

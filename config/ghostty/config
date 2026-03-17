@@ -1,8 +1,9 @@
 command = /usr/sbin/zsh
-theme = dark:tokyonight, light:tokyonight-day
+theme = TokyoNight
 font-family = Hack Nerd Font
 font-size = 13
-background-opacity = 0.95
+background-opacity = 0.80
+background-blur-radius = 100
 # This is the configuration file for Ghostty.
 #
 # This template file has been automatically created at the following

@@ -66,10 +66,18 @@ alias timeshift='pkexec env DISPLAY=$DISPLAY WAYLAND_DISPLAY=$WAYLAND_DISPLAY XD
 
 # Custom widget for "select all"
 zle-select-all() {
-  BUFFER=$(cat) # Replace the command line buffer with all input (simulate "select all")
-  zle end-of-line # Move the cursor to the end of the line
+# BUFFER=$(cat) # Replace the command line buffer with all input (simulate "select all")
+# zle end-of-line # Move the cursor to the end of the line
+	zle beginning-of-line   # Move cursor to start
+	zle set-mark-command    # Set mark (start of selection)
+	zle end-of-line         # Move cursor to end (everything gets selected)
 }
 zle -N zle-select-all
 bindkey '^A' zle-select-all
 
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
+
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
 
